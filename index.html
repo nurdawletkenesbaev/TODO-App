@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/x-icon" href="./images/logo.png">
+    <title>TODO App</title>
+</head>
+
+<body>
+    <div class="relative flex justify-center pt-[40px] w-full min-h-[100vh] bg-black">
+        <div class="w-[90%] max-w-[600px] flex flex-col gap-[15px]">
+            <div class="stats-container flex flex-col-reverse sm:flex-row text-center sm:text-start justify-between items-center p-[20px] text-white border-[1px] border-gray-400 rounded-md">
+                <div class="stats-content">
+                    <h1 class="text-[40px]">Task Done</h1>
+                    <h2 class="text-[28px]">Keep it up</h2>
+                </div>
+                <div class="stats min-w-[150px] min-h-[150px] rounded-full bg-green-600 flex justify-center items-center">
+                    <span class="task-done text-[40px]"></span>
+                </div>
+                <div class="complate-message w-full min-h-[150px] h-full hidden flex items-center text-[50px] text-green-600 justify-center">Tasks complated</div>
+            </div>
+            <form class="form flex justify-between gap-[15px]">
+                <input
+                    class="w-full rounded-md py-[7px] px-[12px] outline-none bg-gray-700 text-white text-[20px] border-[1px] border-transparent focus:border-gray-400 focus:border-[1px]"
+                    type="text" placeholder="Write to next task">
+                <button type="submit"
+                    class="create-button bg-green-600 text-white text-[26px] px-[10px] flex justify-center items-center rounded-md active:scale-95 duration-200"><i
+                        class="fa-solid fa-plus"></i></button>
+            </form>
+            <div class="task-container flex flex-col gap-[15px]">
+                <!-- Tasks -->
+            </div>
+        </div>
+
+        <div class="modal absolute top-0 bottom-0 right-0 left-0 z-1 hidden">
+            <div class="overlay absolute top-0 bottom-0 right-0 left-0 z-2 bg-black opacity-80"></div>
+            <form class="update-contianer absolute z-3 top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] bg-gray-900 rounded-md p-[20px] flex flex-col gap-[10px] w-[90%] sm:w-[400px]">
+                <p class="text-white text-[22px]">Update task</p>
+                <input
+                    class="update-input w-full rounded-md py-[7px] px-[12px] outline-none bg-gray-700 text-white text-[20px] border-[1px] border-transparent focus:border-gray-400 focus:border-[1px]"
+                    type="text">
+                <div class="flex justify-end">
+                    <button type="submit" class="update-btn bg-green-600 text-white text-[20px] py-[7px] px-[10px] flex justify-center items-center rounded-md active:scale-95 duration-200">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
